@@ -1,5 +1,6 @@
 const UNSPLASH_API_URL = "https://api.unsplash.com";
-const ACCESS_KEY = "E-CAqy5FlgeJDWpG3z60eNPfGRI6ObUYfKYfVRnL6sE";
+const ACCESS_KEY = process.env.REACT_APP_UNSPLASH_API_KEY
+
 // let data;
 
 export const fetchPhotos = async (page: number = 1, perPage: number = 10) => {

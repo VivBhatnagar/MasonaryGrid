@@ -1,18 +1,52 @@
-# Getting Started with Create React App
+# Masonry Grid Photo Viewer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a photo viewer application that uses a masonry grid layout to display images fetched from the Unsplash API. It includes features like search functionality and a detailed view of each photo.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Masonry grid layout for displaying photos
+- Search functionality to filter photos by query
+- Detailed view of individual photos with information and images of different sizes based on device width
+
+## Installation
+
+### Prerequisites
+
+- Node.js (v14 or later)
+- npm (v6 or later)
+
+### Setup
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/VivBhatnagar/MasonaryGrid.git
+
+2. **Navigate to the Project Directory**
+
+    cd MasonaryGrid
+
+3. **Run the Application**
+
+    ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+    
+
+## Lighthouse Report
+
+![Lighthouse Report](image-1.png)
+
+## Available Scripts
+
+In the project directory, you can run:
 
 ### `npm test`
 
