@@ -20,7 +20,7 @@ interface GridContextType {
   page: number;
   setPage: Dispatch<SetStateAction<number>>;
   hasFetchedData: MutableRefObject<boolean>;
-  perPage:number
+  perPage: number;
 }
 
 const GridContext = createContext<GridContextType>({
@@ -45,7 +45,7 @@ const GridContext = createContext<GridContextType>({
   page: 1,
   setPage: () => {},
   hasFetchedData: { current: false },
-  perPage:10
+  perPage: 10,
 });
 
 interface GridContextProviderProps {
@@ -88,7 +88,7 @@ const GridContextProvider: React.FC<GridContextProviderProps> = ({
       setPhotos((prevPhotos) => [...prevPhotos, ...newPhotos]);
     };
     loadPhotos();
-  }, [page,perPage, location]);
+  }, [page, perPage, location]);
 
   return (
     <GridContext.Provider
@@ -100,7 +100,7 @@ const GridContextProvider: React.FC<GridContextProviderProps> = ({
         page,
         setPage,
         hasFetchedData,
-        perPage
+        perPage,
       }}
     >
       {children}

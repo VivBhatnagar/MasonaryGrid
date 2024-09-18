@@ -5,7 +5,7 @@ import SearchIcon from "../../assets/SearchIcon";
 import { debounce } from "../../utils";
 
 const Searchgrid: React.FC = () => {
-  const { page,setPhotos, perPage } = useContext(GridContext);
+  const { page, setPhotos, perPage } = useContext(GridContext);
 
   const debouncedHandleInputChange = debounce(async (searchTerm: string) => {
     if (!searchTerm.trim()) {
@@ -21,7 +21,7 @@ const Searchgrid: React.FC = () => {
   };
 
   const resetSearch = async () => {
-    const data = await fetchPhotos(page,perPage);
+    const data = await fetchPhotos(page, perPage);
     setPhotos(data);
   };
 
@@ -30,7 +30,8 @@ const Searchgrid: React.FC = () => {
       <div className="relative left-1/2 top-1 mr-2.5">
         <SearchIcon />
       </div>
-      <input id="search-text"
+      <input
+        id="search-text"
         type="text"
         placeholder="Please type here"
         onChange={handleInputChange}

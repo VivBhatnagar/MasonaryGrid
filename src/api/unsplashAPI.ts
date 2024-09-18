@@ -1,7 +1,5 @@
 const UNSPLASH_API_URL = "https://api.unsplash.com";
-const ACCESS_KEY = process.env.REACT_APP_UNSPLASH_API_KEY
-
-// let data;
+const ACCESS_KEY = process.env.REACT_APP_UNSPLASH_API_KEY;
 
 export const fetchPhotos = async (page: number = 1, perPage: number = 10) => {
   try {
@@ -26,21 +24,13 @@ export const fetchPhotos = async (page: number = 1, perPage: number = 10) => {
   }
 };
 
-
 export const fetchPhotosById = async (id: string) => {
   try {
-    // if(data){
-    //   return data.find((p) => p.id === id);
-
-    // }
-    const response = await fetch(
-      `${UNSPLASH_API_URL}/photos/${id}`,
-      {
-        headers: {
-          Authorization: `Client-ID ${ACCESS_KEY}`,
-        },
-      }
-    );
+    const response = await fetch(`${UNSPLASH_API_URL}/photos/${id}`, {
+      headers: {
+        Authorization: `Client-ID ${ACCESS_KEY}`,
+      },
+    });
 
     if (!response.ok) {
       throw new Error("Failed to fetch data from Unsplash API");
@@ -53,7 +43,6 @@ export const fetchPhotosById = async (id: string) => {
     throw error;
   }
 };
-
 
 export const fetchPhotosByQuery = async (searchTerm: string) => {
   try {

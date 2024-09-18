@@ -16,11 +16,12 @@ export interface Photo {
 const MasonryGrid: React.FC = () => {
   const { photos, setPhoto, setPage, hasFetchedData } = useContext(GridContext);
   const containerRef = useRef<HTMLDivElement | null>(null);
+
+  // TODO :- It was giving some error and was not optimized but will owrk on it
+
   // const [startIndex, setStartIndex] = useState(0);
   // const [endIndex, setEndIndex] = useState(40);
   // const [visiblePhotos, setVisiblePhotos] = useState<Photo[]>([]);
- 
-    
 
   // const handleVirtualScroll = useCallback(() => {
   //   const container = containerRef.current;
@@ -28,15 +29,15 @@ const MasonryGrid: React.FC = () => {
   //     const scrollTop = container.scrollTop;
   //     const containerHeight = container.clientHeight;
   //     const scrollHeight = container.scrollHeight;
-  
+
   //     // Subtract the height of the scrollbar from the total scrollable height
   //     const scrollbarWidth = 3
   //     const totalScrollableHeight = scrollHeight - containerHeight - scrollbarWidth;
-  
+
   //     // Adjust the start and end index based on scroll position
   //     const visibleHeight = containerHeight; // Total visible area of the container
   //     const scrollPercentage = scrollTop / totalScrollableHeight;
-  
+
   //     // Dynamically adjust the visible range of photos
   //     const newEndIndex = Math.min(
   //       Math.ceil((photos.length * scrollPercentage) + 20),
@@ -46,7 +47,7 @@ const MasonryGrid: React.FC = () => {
   //     console.log(newStartIndex, newEndIndex);
   //     setStartIndex(newStartIndex);
   //     setEndIndex(newEndIndex);
-  
+
   //     // Check if we need to fetch more photos when reaching near the bottom
   //     if (scrollTop + containerHeight >= scrollHeight - 100) {
   //       throttledPagination()
@@ -68,14 +69,14 @@ const MasonryGrid: React.FC = () => {
     if (scrollTop + containerHeight >= scrollHeight - 100) {
       throttledPagination();
     }
-  },[]);
+  }, []);
 
-  const handlePagination = () =>{
+  const handlePagination = () => {
     hasFetchedData.current = false; // Reset the useRef for API call on scroll
     setPage((prevPage) => prevPage + 1); // Load more photos as you scroll
-  }
+  };
 
-  const throttledPagination = throttle(handlePagination,100);
+  const throttledPagination = throttle(handlePagination, 100);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -112,7 +113,6 @@ const MasonryGrid: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 export default MasonryGrid;
