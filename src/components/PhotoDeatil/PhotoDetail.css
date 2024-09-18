@@ -1,0 +1,88 @@
+/* Base styles for the photo detail page */
+.photo-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 20px;
+  }
+  
+  .photo-detail img {
+    max-width: 100%;
+    height: 65vh;
+    border-radius: 8px;
+    margin: 10px 0;
+    width:auto;
+  }
+  
+  .photo-detail h2 {
+    font-size: 1rem;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .photo-detail p {
+    font-size: 1rem;
+    text-align: center;
+    color: #555;
+  }
+
+  .back-button {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive adjustments for tablets and smaller screens */
+  @media (max-width: 768px) {
+    .photo-detail h2 {
+      font-size: 1.2rem;
+    }
+  
+    .photo-detail p {
+      font-size: 0.9rem;
+    }
+  
+    button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  
+  /* Further adjustments for mobile devices */
+  @media (max-width: 480px) {
+    .photo-detail {
+      padding: 10px;
+    }
+  
+    .photo-detail img {
+      margin: 15px 0;
+    }
+  
+    .photo-detail h2 {
+      font-size: 1rem;
+    }
+  
+    .photo-detail p {
+      font-size: 0.8rem;
+    }
+  
+    button {
+      font-size: 0.8rem;
+      padding: 6px 12px;
+    }
+  }
+  
