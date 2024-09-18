@@ -30,7 +30,11 @@ This project is a photo viewer application that uses a masonry grid layout to di
 
    cd MasonaryGrid
 
-3. **Run the Application**
+3. **Make Sure to have your Acces Key for Unsplash API**
+
+   store it in .env file
+
+4. **Run the Application**
 
    ### `npm start`
 
